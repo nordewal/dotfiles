@@ -170,6 +170,6 @@ map <C-t> <Esc>:tabnew
 map <C-right> <Esc>:tabnext
 map <C-left> <Esc>:tabprevious
 
-if filereadable("~/.config/vim/vimrc_local")
+if filereadable($HOME . '/.dotfiles/config/vim/vimrc_local')
   source ~/.config/vim/vimrc_local
 endif
