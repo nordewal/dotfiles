@@ -1,6 +1,9 @@
 # dotfiles related stuff
 set -gx PATH $PATH ~/.dotfiles/bin
 
+# user's bin
+set -gx PATH $PATH ~/bin
+
 # locale
 set -g LANG en_US.UTF-8
 set -g LC_ALL en_US.UTF-8
@@ -19,6 +22,7 @@ git config --global alias.dfc "diff --cached"
 git config --global alias.br branch
 git config --global alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit"
 git config --global alias.lola "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global alias.subup "submodule update --init --recursive"
 git config --global alias.subst "submodule status --recursive"
 
@@ -27,7 +31,6 @@ abbr -a g='git'
 abbr -a gp='git push'
 abbr -a gpa='git push --all'
 abbr -a gu='git pull'
-abbr -a gl='git log'
 abbr -a gs='git status'
 abbr -a gd='git diff'
 abbr -a gdc='git diff --cached'
@@ -40,6 +43,8 @@ abbr -a gcb='git checkout -b'
 abbr -a gr='git remote'
 abbr -a grv='git remote -v'
 abbr -a gcd='git rev-parse 2>/dev/null && cd "./$(git rev-parse --show-cdup)"'
+abbr -a gl='git log'
+abbr -a glg='git lg'
 abbr -a glol='git lol'
 abbr -a glola='git lola'
 abbr -a gua="find . -maxdepth 3 -type d -name .git | xargs dirname |xargs -P 40 -n 1 -I '{}' sh -c 'cd {}; git pull'"
