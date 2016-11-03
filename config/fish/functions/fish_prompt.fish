@@ -44,7 +44,17 @@ function fish_prompt --description 'Write out the prompt'
   echo -n (prompt_pwd)
   set_color normal
 
-  printf '%s ' (__fish_git_prompt)
+  set -l fish_git_prompt (__fish_git_prompt)
+
+  printf '%s ' $fish_git_prompt
+
+  # create variable with git root path
+  if test "" != "$fish_git_prompt"
+    set -g gr (git root)
+  else
+    set -e gr
+  end
+
 
   if not test $last_status -eq 0
     set_color -o $fish_color_error
