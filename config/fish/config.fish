@@ -25,6 +25,7 @@ git config --global alias.lola "log --graph --decorate --pretty=oneline --abbrev
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global alias.subup "submodule update --init --recursive"
 git config --global alias.subst "submodule status --recursive"
+git config --global alias.root "rev-parse --show-toplevel"
 
 # abbreviations
 abbr -a g='git'
@@ -40,7 +41,7 @@ abbr -a gb='git branch'
 abbr -a gba='git branch -a'
 abbr -a gc='git checkout'
 abbr -a gcb='git checkout -b'
-abbr -a gr='git remote'
+abbr -a gr='git root'
 abbr -a grv='git remote -v'
 abbr -a gcd='git rev-parse 2>/dev/null && cd "./$(git rev-parse --show-cdup)"'
 abbr -a gl='git log'
