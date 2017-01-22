@@ -69,3 +69,6 @@ set -x VISUAL_EDITOR nvim -p -u ~/.vim/.vimrc
 if test -e ~/.config/fish/config_local.fish
   . ~/.config/fish/config_local.fish
 end
+
+# RVM
+#rvm default
