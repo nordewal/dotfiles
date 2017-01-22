@@ -49,11 +49,11 @@ export GRC_HOME=~/.grc
 # Some useful aliases
 alias mv='mv'
 alias cp='cp -r'
-alias vi=vim
+alias vi=nvim
 alias grep='grep --color=auto'
 alias vim="vim -p -u $INIT_DIR/.config/vim/vimrc"
 alias bash="bash --rcfile $INIT_DIR/.bashrc"
 
 # vim related vars
-export EDITOR=vim
-export VISUAL_EDITOR=vim
+export EDITOR=nvim
+export VISUAL_EDITOR=nvim
