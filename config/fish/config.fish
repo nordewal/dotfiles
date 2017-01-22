@@ -70,5 +70,16 @@ if test -e ~/.config/fish/config_local.fish
   . ~/.config/fish/config_local.fish
 end
 
-# RVM
-#rvm default
+set -x LC_CTYPE en_US.UTF-8
+set -x LC_NUMERIC de_CH.UTF-8
+set -x LC_TIME de_CH.UTF-8
+set -x LC_COLLATE de_CH.UTF-8
+set -x LC_MONETARY de_CH.UTF-8
+set -x LC_MESSAGES en_US.UTF-8
+set -x LC_PAPER de_CH.UTF-8
+set -x LC_NAME en_US.UTF-8
+set -x LC_ADDRESS de_CH.UTF-8
+set -x LC_TELEPHONE de_CH.UTF-8
+set -x LC_MEASUREMENT de_CH.UTF-8
+set -x LC_IDENTIFICATION en_US.UTF-8
+set -x LC_ALL en_US.UTF-8
