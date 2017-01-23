@@ -74,12 +74,7 @@ if status -l; and test -r /etc/locale.conf
     end </etc/locale.conf
 end
 
-# X stuff
-function XX
-  rm -rf ~/.cache/sessions/xf*
-  exec startx
-end
-
+# start X if login shell
 if [ (tty) = "/dev/tty1" -a (whoami) = "joschi" ]
   XX
 end
