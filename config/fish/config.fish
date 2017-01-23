@@ -69,7 +69,6 @@ end
 # set locales
 if status -l; and test -r /etc/locale.conf
     while read -l kv
-        echo set -gx (string split "=" -- $kv)
         set -gx (string split "=" -- $kv)
     end </etc/locale.conf
 end
