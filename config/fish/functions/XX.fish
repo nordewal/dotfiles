@@ -1,4 +1,4 @@
 function XX
   rm -rf ~/.cache/sessions/xf*
-  exec startx
+  exec startx >/dev/null 2>&1
 end
