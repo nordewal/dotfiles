@@ -66,6 +66,9 @@ if test -e ~/.config/fish/config_local.fish
   . ~/.config/fish/config_local.fish
 end
 
+# docker stuff
+set -x DOCKER_ID_USER "nordewal"
+
 # set locales
 if status -l; and test -r /etc/locale.conf
     while read -l kv
