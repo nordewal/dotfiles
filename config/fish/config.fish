@@ -68,6 +68,15 @@ end
 
 # docker stuff
 set -x DOCKER_ID_USER "nordewal"
+abbr -a dklc='docker ps -l'  # List last Docker container
+abbr -a dklcid='docker ps -l -q'  # List last Docker container ID
+abbr -a dklcip='docker inspect -f "{{.NetworkSettings.IPAddress}}" $(docker ps -l -q)'  # Get IP of last Docker container
+abbr -a dkps='docker ps'  # List running Docker containers
+abbr -a dkpsa='docker ps -a'  # List all Docker containers
+abbr -a dki='docker images'  # List Docker images
+abbr -a dkrmac='docker rm $(docker ps -a -q)'  # Delete all Docker containers
+abbr -a dkrmdi='docker images -q -f dangling=true |xargs -r docker rmi'  # Delete all dangling Docker images
+abbr -a dkelc='docker exec -it (dklcid) bash' # Enter last container (works with Docker 1.3 and above)
 
 # set locales
 if status -l; and test -r /etc/locale.conf
