@@ -64,3 +64,6 @@
 [submodule "config/vim/bundle/tabular"]
 	path = config/vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "config/i3/i3blocks-contrib"]
+	path = config/i3/i3blocks-contrib
+	url = https://github.com/vivien/i3blocks-contrib
