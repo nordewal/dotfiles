@@ -16,7 +16,7 @@ set $icon_font FontAwesome 11
 font pango:$font
 
 # Define Locker
-set $Locker i3lock -i '/home/joschi/.local/tmp/screensaver.png' && sleep 1
+set $Locker i3lock -t -i '/home/joschi/.local/tmp/screensaver.png'
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -29,6 +29,9 @@ focus_follows_mouse yes
 #############################################
 #                  Keymaps                  #
 #############################################
+
+# configure monitors
+bindsym $mod+m         exec "~/bin/monitor.sh"
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -244,8 +247,9 @@ bindsym $mod+T mode "$mode_thinkpad"
 #                Autostart                  #
 #############################################
 exec --no-startup-id dropbox start
+exec --no-startup-id /usr/local/ctera-agent/bin/CteraAgentWD
 exec --no-startup-id clipit
-exec --no-startup-id xautolock -time 3 -locker "$Locker"
+exec --no-startup-id xautolock -time 10 -locker "$Locker" -notify 10 -notifier "notify-send -u critical -t 10000 'LOCKING screen in 10 seconds'"
 exec --no-startup-id numlockx on
 #exec --no-startup-id nm-applet
 # exec --no-startup-id compton --config ~/.config/i3/compton.conf

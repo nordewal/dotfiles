@@ -87,5 +87,5 @@ end
 
 # start X if login shell
 if [ (tty) = "/dev/tty1" -a (whoami) = "joschi" ]
-  XX
+  exec XX
 end
