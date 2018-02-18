@@ -57,10 +57,10 @@ end
 alias gbs='git branch | perl -ne '"'"'/^\* (?:\(detached from (.*)\)|(.*))/ && print "$1$2"'"'"''
 
 # vim related stuff
-alias vi="vim"
+alias vi="nvim -p"
 alias vim="nvim -p"
 set -x EDITOR vi
-set -x VISUAL_EDITOR nvim -p -u ~/.vim/.vimrc
+set -x VISUAL_EDITOR nvim -p
 
 if test -e ~/.config/fish/config_local.fish
   source ~/.config/fish/config_local.fish
@@ -87,5 +87,5 @@ end
 
 # start X if login shell
 if [ (tty) = "/dev/tty1" -a (whoami) = "joschi" ]
-  exec XX
+  XX
 end

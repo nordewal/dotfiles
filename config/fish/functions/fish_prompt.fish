@@ -1,5 +1,5 @@
 set -g fish_prompt_pwd_dir_length 0
-set -g fish_color_user yellow
+set -g fish_color_user \#ffa500
 set -g fish_color_cwd \#00ffff
 set -g fish_color_command \#ffff87
 set -g fish_color_autosuggestion \#949494
