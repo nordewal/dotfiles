@@ -44,11 +44,10 @@ scrollbar = on
 #cursor = #dcdccc
 #cursor_foreground = #dcdccc
 
-
 # special
-foreground      = #c5c8c6
-foreground_bold = #c5c8c6
-cursor          = #c5c8c6
+foreground      = #e4e6e5
+foreground_bold = #e4e6e5
+cursor          = #e4e6e5
 background      = #1d1f21
 
 # black
@@ -60,7 +59,7 @@ color1  = #a54242
 color9  = #cc6666
 
 # green
-color2  = #8C990F
+color2  = #8c990f
 color10 = #b5bd68
 
 # yellow
@@ -68,20 +67,20 @@ color3  = #de935f
 color11 = #f0c674
 
 # blue
-color4  = #3676AA
-color12 = #679DCB
+color4  = #3676aa
+color12 = #679dcb
 
 # magenta
 color5  = #85678f
 color13 = #b294bb
 
 # cyan
-color6  = #5e8d87
-color14 = #8abeb7
+color6  = #359f91
+color14 = #77bfb6
 
 # white
 color7  = #707880
-color15 = #c5c8c6
+color15 = #e4e6e5
 
 
 [hints]
