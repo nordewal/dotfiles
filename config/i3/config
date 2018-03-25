@@ -129,40 +129,40 @@ bindsym --release Control+Print exec cd /home/joschi/screenshots && scrot --sele
 #                  Workspaces               #
 #############################################
 # Install FontAwesome for the icons, Cheatsheet: http://fontawesome.io/cheatsheet/
-set $workspace1_chat "1 "
-set $workspace2_mail "2 "
+set $workspace1 "1 "
+set $workspace2 "2 "
 set $workspace3_code "3 "
-set $workspace4_browser "4 "
-set $workspace5_filebrowser "5 "
-set $workspace6_misc "6 "
+set $workspace4 "4 "
+set $workspace5 "5 "
+set $workspace6 "6 "
 set $workspace7_imgprocessing "7 "
 set $workspace8 "8 "
-set $workspace9 "9 "
-set $workspace10_terminal "10 "
+set $workspace9_stuff "9 "
+set $workspace10 "10 "
 
 # switch to workspace
-bindsym $mod+1 workspace $workspace1_chat
-bindsym $mod+2 workspace $workspace2_mail
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3_code
-bindsym $mod+4 workspace $workspace4_browser
-bindsym $mod+5 workspace $workspace5_filebrowser
-bindsym $mod+6 workspace $workspace6_misc
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
 bindsym $mod+7 workspace $workspace7_imgprocessing
 bindsym $mod+8 workspace $workspace8
-bindsym $mod+9 workspace $workspace9
-bindsym $mod+0 workspace $workspace10_terminal
+bindsym $mod+9 workspace $workspace9_stuff
+bindsym $mod+0 workspace $workspace10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $workspace1_chat
-bindsym $mod+Shift+2 move container to workspace $workspace2_mail
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3_code
-bindsym $mod+Shift+4 move container to workspace $workspace4_browser
-bindsym $mod+Shift+5 move container to workspace $workspace5_filebrowser
-bindsym $mod+Shift+6 move container to workspace $workspace6_misc
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
 bindsym $mod+Shift+7 move container to workspace $workspace7_imgprocessing
 bindsym $mod+Shift+8 move container to workspace $workspace8
-bindsym $mod+Shift+9 move container to workspace $workspace9
-bindsym $mod+Shift+0 move container to workspace $workspace10_terminal
+bindsym $mod+Shift+9 move container to workspace $workspace9_stuff
+bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # move to previous / next workspace
 bindsym $mod+Prior              workspace prev
@@ -176,28 +176,26 @@ bindsym $mod+Shift+Next         move container to workspace next
 bindsym $mod+Shift+BackSpace    workspace back_and_forth
 bindsym $mod+Shift+b            move container to workspace back_and_forth
 
+# move workspaces on monitors
+bindsym $mod+n move workspace to output right
+
 # workspaces on specific screens
 set $screen_internal   "eDP1"
-set $screen_external_1 "DP1-1"
-set $screen_external_2 "DP1-2"
+set $screen_external_1 "DP1-2"
+set $screen_external_2 "DP1-1"
 
-workspace $workspace1_chat         output $screen_internal
-workspace $workspace2_mail         output $screen_external_1
-workspace $workspace3_code         output $screen_external_2
-workspace $workspace4_browser      output $screen_external_1
+workspace $workspace3_code         output $screen_external_1
+workspace $workspace9_stuff        output $screen_external_2
 
 #############################################
 #               Windows-specific            #
 #############################################
 
 # Program-Workspace Default Mapping
-assign [class="Pidgin"]         $workspace1_chat
-assign [class="Thunderbird"]    $workspace2_mail
-assign [class="Firefox"]        $workspace4_browser
-assign [class="Eclipse"]        $workspace3_code
-assign [class="jetbrains-idea"] $workspace3_code
+assign [class="jetbrains-idea"]     $workspace3_code
+assign [class="keepassxc"]          $workspace9_stuff
+assign [class="Darktable"]          $workspace7_imgprocessing
 
-# for_window [instance="keepassx"]    floating enable
 for_window [instance="pavucontrol"] floating enable
 
 #############################################
