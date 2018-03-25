@@ -7,7 +7,7 @@ bash -c "$(curl -fsSL https://raw.github.com/nordewal/dotfiles/master/bin/dotfil
 ## Minimal packages
 First install yaourt & pacget, then install:
 
-```arandr bash-completion bind-tools cmake dstat dunst efibootmgr ethtool exfat-utils feh firefox fish-git galculator git gnome-keyring google-chrome gsimplecal gthumb i3-wm i3lock i3status jq keepassxc lshw lsof network-manager-applet networkmanager nfs-utils ngrep ntfs-3g numlockx openssh otf-font-awesome p7zip pavucontrol perf powerline-fonts-git pulseaudio python-neovim rofi rsync scrot strace sublime-text-dev termite termite-terminfo thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman unzip vim wget x86_energy_perf_policy xautolock xorg-server xorg-xev xorg-xprop
+```arandr bash-completion bind-tools cmake dstat dunst efibootmgr ethtool exfat-utils feh firefox fish-git galculator git gnome-keyring google-chrome gsimplecal gthumb i3-wm i3lock i3status jq keepassxc lshw lsof network-manager-applet networkmanager nfs-utils ngrep ntfs-3g numlockx openssh otf-font-awesome p7zip pavucontrol perf powerline-fonts-git pulseaudio python-neovim rofi rsync scrot strace sublime-text-dev termite termite-terminfo thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman unzip vim wget x86_energy_perf_policy xautolock xorg-server xorg-xev xorg-xinit xorg-xprop
 ```
 
 ## Optional packages:
