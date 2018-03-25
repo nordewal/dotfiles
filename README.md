@@ -4,12 +4,23 @@ Installation
 bash -c "$(curl -fsSL https://raw.github.com/nordewal/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
 ```
 
-## Required tools/packages
+## Minimal packages
+First install yaourt & pacget, then install:
 
-- neovim (and python-neovim   - python3!!)
-- terminator-gtk
-- fish (fish-git    -> build from sources!!)
-- powerline-fonts
+```arandr bash-completion bind-tools cmake dstat dunst efibootmgr ethtool exfat-utils feh firefox fish-git galculator git gnome-keyring google-chrome gsimplecal gthumb i3-wm i3lock i3status jq keepassxc lshw lsof network-manager-applet networkmanager nfs-utils ngrep ntfs-3g numlockx openssh otf-font-awesome p7zip pavucontrol perf powerline-fonts-git pulseaudio python-neovim rofi rsync scrot strace sublime-text-dev termite termite-terminfo thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman unzip vim wget x86_energy_perf_policy xautolock xorg-server xorg-xev xorg-xprop
+```
+
+## Optional packages:
+```calibre cnijfilter2-mg7500 colorpicker cups darktable-git docker-compose dropbox ghostscript gimp gradle hugin intellij-idea-community-edition jdk8-openjdk jre8-openjdk libreoffice-fresh masterpdfeditor maven mplayer openjdk8-src rawtherapee ristretto s3cmd simple-scan sysstat tcpdump teamviewer unrar vlc wireshark-gtk xcalib
+```
+
+## pacman
+Remove orphaned duplicates:
+```pacman -Rns $(pacman -Qtdq)
+```
+List every package you've explicitly installed:
+```pacman -Qei | awk '/^Name/ { name=$3 } /^Groups/ { if ( $3 != "base" && $3 != "base-devel" ) { print name } }'
+```
 
 ## Enable deoplete
 

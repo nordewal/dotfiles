@@ -30,6 +30,9 @@ focus_follows_mouse yes
 #                  Keymaps                  #
 #############################################
 
+# toggle focus follows mouse
+bindsym $mod+Shift+Tab focus_follows_mouse mode_toggle
+
 # configure monitors
 bindsym $mod+m         exec "~/bin/monitor.sh"
 
