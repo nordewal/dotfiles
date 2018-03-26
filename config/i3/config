@@ -176,8 +176,8 @@ bindsym $mod+Control+Right      workspace next
 #bindsym $mod+Control+l          workspace next
 bindsym $mod+Shift+Prior        move container to workspace prev
 bindsym $mod+Shift+Next         move container to workspace next
-bindsym $mod+Shift+BackSpace    workspace back_and_forth
-bindsym $mod+Shift+b            move container to workspace back_and_forth
+bindsym $mod+BackSpace          workspace back_and_forth
+bindsym $mod+Shift+BackSpace    move container to workspace back_and_forth
 
 # move workspaces on monitors
 bindsym $mod+n move workspace to output right
