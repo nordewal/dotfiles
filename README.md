@@ -22,6 +22,11 @@ List every package you've explicitly installed:
 ```pacman -Qei | awk '/^Name/ { name=$3 } /^Groups/ { if ( $3 != "base" && $3 != "base-devel" ) { print name } }'
 ```
 
+## Open mailto link in GMail
+Type in Chrome JS console and click allow:
+```navigator.registerProtocolHandler("mailto", "(1)mail.google.com/mail/?extsrc=mailto&url=%s", "Gmail");
+```
+
 ## Enable deoplete
 
 1. Install neovim!!
