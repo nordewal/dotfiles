@@ -195,9 +195,9 @@ workspace $workspace9_stuff        output $screen_external_2
 #############################################
 
 # Program-Workspace Default Mapping
-assign [class="jetbrains-idea"]     $workspace3_code
-assign [class="keepassxc"]          $workspace9_stuff
-assign [class="Darktable"]          $workspace7_imgprocessing
+assign [class="jetbrains-idea"]                     $workspace3_code
+assign [class="keepassxc" window_type="normal"]     $workspace9_stuff
+assign [class="Darktable"]                          $workspace7_imgprocessing
 
 for_window [instance="pavucontrol"] floating enable
 
