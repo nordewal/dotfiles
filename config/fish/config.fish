@@ -78,6 +78,9 @@ abbr -a dkrmac 'docker rm (docker ps -a -q)'  # Delete all Docker containers
 abbr -a dkrmdi 'docker images -q -f dangling=true |xargs -r docker rmi'  # Delete all dangling Docker images
 abbr -a dkelc 'docker exec -it (dklcid) bash' # Enter last container (works with Docker 1.3 and above)
 
+# misc aliases
+alias ssh="env TERM=xterm ssh"
+
 # set locales
 if status -l; and test -r /etc/locale.conf
     while read -l kv
