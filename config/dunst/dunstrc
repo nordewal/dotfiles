@@ -1,46 +1,52 @@
 [global]
-    font = "Monospace 8"
+    font = "Helvetiva 11"
     allow_markup = yes
     format = "<b>%s %p</b>\n%b"
-    sort = yes
-    indicate_hidden = true
-    # geometry = "x5"
-    idle_threshold = 0
-    geometry = "300x5-20+20"
+
+    geometry = "0x0-20+40"
     alignment = left
-    show_age_threshold = 10
-    sticky_history = yes
-    follow = mouse
     word_wrap = yes
     separator_height = 2
-    padding = 20
-    horizontal_padding = 10
-    separator_color = frame
-    startup_notification = true
-    dmenu = "/usr/bin/dmenu -p dunst: -nb #FFFFFF -nf #000000 -sb #94DBFF -sf #000000"
-    browser = firefox
+    padding = 15
+    horizontal_padding = 15
+    follow = mouse
 
-[frame]
-    width = 3
-    color = "#000000"
+    startup_notification = false
+
+    dmenu = "/usr/bin/dmenu -p dunst: -nb #FFFFFF -nf #000000 -sb #94DBFF -sf #000000"
+    browser = /usr/bin/google-chrome-stable
+
+    sort = yes
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    indicate_hidden = true
+
+    sticky_history = yes
+    history_length = 20
+    show_age_threshold = 60
+    idle_threshold = 60
+
+    frame_color = "#c5c8c6"
+    separator_color = "#c5c8c6"
+
 
 [shortcuts]
-    close = ctrl+space
-    close_all = ctrl+shift+space
-    history = ctrl+grave
-    context = ctrl+shift+period
+    close = mod4+Delete
+    history = mod4+shift+Delete
 
-[urgency_low]
-    background = "#ffffff"
-    foreground = "#000000"
-    timeout = 20
+# Based on https://github.com/khamer/base16-dunst/blob/master/themes/base16-google-dark.dunstrc
+[base16_low]
+    msg_urgency = low
+    background = "#282a2e"
+    foreground = "#969896"
 
-[urgency_normal]
-    background = "107FC9"
-    foreground = "#000000"
-    timeout = 30
+[base16_normal]
+    msg_urgency = normal
+    background = "#373b41"
+    foreground = "#c5c8c6"
 
-[urgency_critical]
-    background = "#ff9999"
-    foreground = "#000000"
-    timeout = 0
+[base16_critical]
+    msg_urgency = critical
+    background = "#CC342B"
+    foreground = "#e0e0e0"
