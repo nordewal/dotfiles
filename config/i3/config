@@ -277,6 +277,7 @@ bar {
     tray_output        DP-2-1
     tray_output        DP-2-2
     tray_output        eDP-1
+    tray_output        eDP1
     #status_command     locale >/tmp/a 2>&1
     #status_command     SCRIPT_DIR=~/.config/i3/i3blocks-contrib i3blocks -c ~/.config/i3/i3blocks.conf
     font               pango:$font, $icon_font
