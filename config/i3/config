@@ -256,7 +256,7 @@ bindsym $mod+T mode "$mode_thinkpad"
 #                Autostart                  #
 #############################################
 exec --no-startup-id dropbox start
-exec --no-startup-id LD_LIBRARY_PATH=/usr/local/ctera-agent/lib /usr/local/ctera-agent/bin/CteraAgentWD
+exec --no-startup-id nextcloud
 exec --no-startup-id clipit
 exec --no-startup-id xautolock -time 10 -locker "$Locker" -notify 10 -notifier "notify-send -u critical -t 10000 'Screen Lock' 'Locking in 10 seconds'"
 exec --no-startup-id numlockx on
