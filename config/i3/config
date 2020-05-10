@@ -53,9 +53,15 @@ bindsym $mod+Tab       exec "rofi -show"
 # Volume control, using pulse audio
 bindsym XF86AudioRaiseVolume    exec $HOME/.dotfiles/bin/set-volume.sh +5%
 bindsym XF86AudioLowerVolume    exec $HOME/.dotfiles/bin/set-volume.sh -5%
-
-# Toggle sound
 bindsym XF86AudioMute           exec $HOME/.dotfiles/bin/set-volume.sh mute
+bindsym $mod+KP_Add             exec $HOME/.dotfiles/bin/set-volume.sh +5%
+bindsym $mod+KP_Subtract        exec $HOME/.dotfiles/bin/set-volume.sh -5%
+bindsym $mod+KP_Multiply        exec $HOME/.dotfiles/bin/set-volume.sh mute
+# Emulate media keys
+bindsym --release $mod+End      exec --no-startup-id playerctl next
+bindsym --release $mod+Home     exec --no-startup-id playerctl previous
+bindsym --release $mod+KP_Divide  exec --no-startup-id playerctl play-pause
+
 
 # Toggle mic
 bindsym XF86AudioMicMute        exec $HOME/.dotfiles/bin/toggle-mic.sh
@@ -100,9 +106,12 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+
+# scratchpad
+bindsym $mod+s scratchpad show
+bindsym $mod+Shift+s move scratchpad
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -255,7 +264,7 @@ bindsym $mod+T mode "$mode_thinkpad"
 #############################################
 #                Autostart                  #
 #############################################
-exec --no-startup-id dropbox start
+exec --no-startup-id redshift-gtk -O 4000
 exec --no-startup-id nextcloud
 exec --no-startup-id clipit
 exec --no-startup-id xautolock -time 10 -locker "$Locker" -notify 10 -notifier "notify-send -u critical -t 10000 'Screen Lock' 'Locking in 10 seconds'"
