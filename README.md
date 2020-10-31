@@ -1,7 +1,7 @@
 Installation
 ============
 ```
-git clone --recurse-submodules https://github.com/nordewal/dotfiles
+bash -c "$(curl -fsSL https://raw.github.com/nordewal/dotfiles/master/bin/dotfiles)"
 ```
 
 ## Install the following packages
