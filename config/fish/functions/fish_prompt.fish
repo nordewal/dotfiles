@@ -50,7 +50,7 @@ function fish_prompt --description 'Write out the prompt'
 
   # create variable with git root path
   if test "" != "$fish_git_prompt"
-    set -g gr (git root)
+    set -g gr (git rev-parse --show-toplevel)
   else
     set -e gr
   end
