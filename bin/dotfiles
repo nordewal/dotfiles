@@ -262,7 +262,7 @@ if [[ ! -d $DOTFILES ]]; then
   new_dotfiles_install=1
   prompt_delay=15
   e_header "Downloading dotfiles"
-  git clone --recursive https://github.com/${github_user:-joschi03}/dotfiles.git $DOTFILES
+  git clone --recursive -j8 https://github.com/${github_user:-nordewal}/dotfiles.git $DOTFILES
   cd $DOTFILES
 elif [[ "$1" != "restart" ]]; then
   # Make sure we have the latest files.
@@ -270,7 +270,7 @@ elif [[ "$1" != "restart" ]]; then
   cd $DOTFILES
   prev_head="$(git rev-parse HEAD)"
   git pull
-  git submodule update --init --recursive --quiet
+  git submodule update -j8 --init --recursive --quiet
   if [[ "$(git rev-parse HEAD)" != "$prev_head" ]]; then
     e_header "Changes detected, restarting script"
     exec "$0" "restart"
