@@ -69,3 +69,6 @@ end
 if test -e ~/.dotfiles_custom/config/fish/config.fish
   source ~/.dotfiles_custom/config/fish/config.fish
 end
+if test -e ~/.dotfiles_custom/config/fish/completions
+  set -gx fish_complete_path $fish_complete_path ~/.dotfiles_custom/config/fish/completions
+end
