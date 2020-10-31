@@ -234,9 +234,6 @@
         scroll_factor 2
     }
 
-    output $scr_int scale 1.0
-
-
 #
 # autostart:
 #
