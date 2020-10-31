@@ -2,7 +2,7 @@
 # general config
 #
     set $mod Mod4
-    
+
     # text rendering and scalability on retina/hidpi displays (thanks to pango).
     set $font Source Code Pro Regular
     set $icon_font FontAwesome 10
@@ -10,17 +10,17 @@
 
     # terminal
     set $term /usr/bin/kitty
-    
+
     # Use Mouse+$mod to drag floating windows to their wanted position
     floating_modifier $mod
-    
+
     # window border
     default_border pixel 1
-    
+
     focus_follows_mouse yes
     focus_on_window_activation focus
 
-    
+
     # lock screen after 300 seconds, and send a warning 15s before that
     set $locker swaylock -f -i /home/janosch/.local/share/screensaver
     exec swayidle -w \
@@ -34,22 +34,22 @@
     bindsym {
         # start a terminal
         $mod+Return exec $term
-        
+
         # kill focused window
         $mod+q kill
-        
+
         # connect to wifi
         $mod+i exec $term -e "nmtui"
-        
+
         # use wofi as dmenu replacement
         $mod+d         exec "wofi --show run"
         $mod+Control+d exec "wofi -combi-modi window,run -show combi"
         $mod+Tab       exec "wofi -show"
-    
+
         # mako
         $mod+Delete    exec makoctl dismiss
         $mod+backslash exec makoctl invoke
-        
+
         # reload the configuration file
         $mod+Shift+r reload
 
@@ -67,30 +67,30 @@
         $mod+Up    focus up
         $mod+Right focus right
         $mod+z focus output left
-        
+
         # move focused window
         $mod+Shift+Left       move left
         $mod+Shift+Down       move down
         $mod+Shift+Up         move up
         $mod+Shift+Right      move right
-        
+
         # split container
         $mod+b split h
         $mod+v split v
-        
+
         # enter fullscreen mode for the focused container
         $mod+f fullscreen toggle
-        
+
         # change container layout (stacked, tabbed, toggle split)
         $mod+w layout tabbed
         $mod+e layout toggle split
-        
+
         # toggle tiling / floating
         $mod+Shift+space floating toggle
-        
+
         # change focus between tiling / floating windows
         $mod+space focus mode_toggle
-        
+
         # scratchpad
         $mod+s scratchpad show
         $mod+Shift+s move scratchpad
@@ -102,23 +102,23 @@
 # mediakeys:
 #
     bindsym --locked {
-        
+
         XF86AudioRaiseVolume        exec $HOME/.dotfiles/bin/set-volume.sh +5%
         $mod+KP_Add                 exec $HOME/.dotfiles/bin/set-volume.sh +5%
-        
+
         XF86AudioLowerVolume        exec $HOME/.dotfiles/bin/set-volume.sh -5%
         $mod+KP_Subtract            exec $HOME/.dotfiles/bin/set-volume.sh -5%
-        
+
         XF86AudioMute               exec $HOME/.dotfiles/bin/set-volume.sh mute
         $mod+KP_Multiply            exec $HOME/.dotfiles/bin/set-volume.sh mute
-        
+
         XF86AudioPlay               exec playerctl play-pause
         $mod+KP_Divide              exec playerctl play-pause
         XF86AudioNext               exec playerctl next
         $mod+End                    exec playerctl next
         XF86AudioPrev               exec playerctl previous
         $mod+Home                   exec playerctl previous
-        
+
         XF86MonBrightnessDown       exec brightnessctl set 5%-
         XF86MonBrightnessUp         exec brightnessctl set +5%
     }
@@ -139,7 +139,7 @@
     set $workspace8 "8:   8   "
     set $workspace9 "9:   9   "
     set $workspace0 "10:   10   "
-    
+
     # switch to workspace
     bindsym {
         $mod+1 workspace $workspace1
@@ -152,7 +152,7 @@
         $mod+8 workspace $workspace8
         $mod+9 workspace $workspace9
         $mod+0 workspace $workspace0
-        
+
         # move focused container to workspace
         $mod+Shift+1 move container to workspace $workspace1
         $mod+Shift+2 move container to workspace $workspace2
@@ -164,7 +164,7 @@
         $mod+Shift+8 move container to workspace $workspace8
         $mod+Shift+9 move container to workspace $workspace9
         $mod+Shift+0 move container to workspace $workspace0
-        
+
         # move to previous / next workspace
         $mod+Prior              workspace prev
         $mod+Next               workspace next
@@ -194,7 +194,7 @@
         bindsym h exec systemctl hibernate; mode "default"
         bindsym r exec systemctl reboot; mode "default"
         bindsym Shift+s exec systemctl poweroff -i; mode "default"
-    
+
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -213,7 +213,7 @@
         bindsym Shift+s exec grim -g "$(slurp)" - |wl-copy, mode "default"
         bindsym p exec grim -g "$(slurp)" - |swappy -f $screenshot_dir/$(date +'screen_%Y-%m-%d_%H-%M-%S.png'), mode "default"
         bindsym Shift+p exec grim -g "$(slurp)" - |swappy -f -, mode "default"
-    
+
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -235,7 +235,7 @@
     }
 
     output $scr_int scale 1.0
-    
+
 
 #
 # autostart:
@@ -280,4 +280,7 @@
 include /etc/sway/config.d/*
 
 # include custom sway config
-include ~.dotfiles_custom/config/sway/config
+include ~/.dotfiles_custom/config/sway/config
+#
+# include local sway config
+include local
