@@ -22,9 +22,10 @@
 
 
     # lock screen after 300 seconds, and send a warning 15s before that
-    set $locker swaylock -f -i /home/janosch/.local/share/screensaver
+    set $locker swaylock -f -i ~/.dotfiles/screensaver
     exec swayidle -w \
              timeout 900 "notify-send -u critical -t 15000 'Screen Lock' 'Locking in 15 seconds'" \
+             timeout 910 "shuf -n1 -e ~/.dotfiles/screensavers/*| xargs -i ln -s {} ~/.dotfiles/screensaver" \
              timeout 915 "$locker" \
              before-sleep "$locker"
 
