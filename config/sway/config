@@ -23,9 +23,10 @@
 
     # lock screen after 300 seconds, and send a warning 15s before that
     set $locker swaylock -f -i ~/.dotfiles/screensaver
+    # shuffle screensavers many times to also get new ones when locking manually
     exec swayidle -w \
+             timeout 2 "shuf -n1 -e ~/.dotfiles/screensavers/*| xargs -i ln -sf {} ~/.dotfiles/screensaver" \
              timeout 600 "notify-send -u critical -t 15000 'Screen Lock' 'Locking in 15 seconds'" \
-             timeout 610 "shuf -n1 -e ~/.dotfiles/screensavers/*| xargs -i ln -sf {} ~/.dotfiles/screensaver" \
              timeout 615 "$locker" \
              before-sleep "$locker"
 
