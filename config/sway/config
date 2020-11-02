@@ -182,6 +182,7 @@
 #
     for_window [app_id="pavucontrol"] floating enable
     for_window [title=".*scratchpad - Code - OSS$"] move scratchpad
+    for_window [title=".*scratchpad - Visual Studio Code$"] move scratchpad
 
 
 #
