@@ -34,9 +34,14 @@ function fish_prompt --description 'Write out the prompt'
     set -g __fish_prompt_normal (set_color normal)
   end
 
+  if not set -q __fish_prompt_hostname
+    set -g __fish_prompt_hostname (hostname -s)
+  end
+
   # USER
   set_color $fish_color_user
-  printf "$USER "
+  printf "$__fish_prompt_hostname "
+  # printf "$USER "
   set_color normal
 
   # PWD
