@@ -66,6 +66,9 @@ if status -l; and test -r /etc/locale.conf
 end
 
 # include custom dotfiles
+if test -e ~/.config/fish/config_local.fish
+  source ~/.config/fish/config_local.fish
+end
 if test -e ~/.dotfiles_custom/config/fish/config.fish
   source ~/.dotfiles_custom/config/fish/config.fish
 end
