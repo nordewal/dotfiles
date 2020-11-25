@@ -37,7 +37,7 @@ alias gbs='git branch | perl -ne '"'"'/^\* (?:\(detached from (.*)\)|(.*))/ && p
 # vim related stuff
 alias vi="nvim -p"
 alias vim="nvim -p"
-set -x EDITOR vi
+set -x EDITOR nvim -p
 set -x VISUAL_EDITOR nvim -p
 
 # docker stuff
