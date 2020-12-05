@@ -123,6 +123,8 @@
 
         XF86MonBrightnessDown       exec brightnessctl set 5%-
         XF86MonBrightnessUp         exec brightnessctl set +5%
+        $mod+minus                  exec brightnessctl set 5%-
+        $mod+equal                  exec brightnessctl set +5%
     }
     bindsym $mod+XF86AudioMute       exec pavucontrol
 
