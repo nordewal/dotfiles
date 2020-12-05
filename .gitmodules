@@ -34,3 +34,6 @@
 [submodule "config/vim/bundle/tabular"]
 	path = config/vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "config/vim/bundle/vim-fish"]
+	path = config/vim/bundle/vim-fish
+	url = https://github.com/dag/vim-fish.git
