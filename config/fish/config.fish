@@ -42,6 +42,8 @@ set -x VISUAL_EDITOR nvim -p
 
 # docker stuff
 set -x DOCKER_ID_USER "nordewal"
+abbr -a dc 'docker-compose'
+abbr -a dce 'docker-compose exec'
 abbr -a dklc 'docker ps -l'  # List last Docker container
 abbr -a dklcid 'docker ps -l -q'  # List last Docker container ID
 abbr -a dklcip 'docker inspect -f "{{.NetworkSettings.IPAddress}}" $(docker ps -l -q)'  # Get IP of last Docker container
