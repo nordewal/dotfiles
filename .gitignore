@@ -13,6 +13,7 @@ vimrc_local
 /config/fish/config_local.fish
 /config/fish/fish_history
 /config/fish/fishd*
+/config/fish/fish_variables
 
 # ignore local sway config
 /config/sway/local
