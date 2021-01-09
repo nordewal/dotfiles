@@ -1,0 +1,13 @@
+term=kitty
+height=400
+width=800
+insensitive=true
+allow_images=true
+allow_markup=true
+gtk_dark=true
+layer=overlay
+insensitive=true
+prompt=
+image_size=16
+line_wrap=word
+key_expand=Tab

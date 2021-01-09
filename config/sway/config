@@ -44,9 +44,8 @@
         $mod+i exec $term -e "nmtui"
 
         # use wofi as dmenu replacement
-        $mod+d         exec "wofi --show run"
-        $mod+Control+d exec "wofi -combi-modi window,run -show combi"
-        $mod+Tab       exec "wofi -show"
+        $mod+d         exec "wofi --show drun"
+        $mod+Shift+d   exec "wofi --show run"
 
         # mako
         $mod+Delete    exec makoctl dismiss
