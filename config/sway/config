@@ -244,6 +244,8 @@
     # prepare scratchpade
     set $scratch_dir .local/share/scratchpad
     exec mkdir -p $scratch_dir
+    exec code -n $scratch_dir
+    exec sh -c 'GTK_THEME=Adwaita:dark exec qalculate-gtk'
 
     exec mako
     exec nextcloud
