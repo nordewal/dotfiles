@@ -93,8 +93,10 @@
         $mod+space focus mode_toggle
 
         # scratchpad
-        $mod+s scratchpad show
-        $mod+Shift+s move scratchpad
+        $mod+Shift+s exec swaymsg scratchpad show
+        $mod+s exec swaymsg '[title=".*scratchpad - (Code - OSS|Visual Studio Code)$"]' scratchpad show || exec code -n $scratch_dir
+        $mod+c exec swaymsg '[app_id="qalculate-gtk"]' scratchpad show || GTK_THEME=Adwaita:dark exec qalculate-gtk
+
     }
 
 
@@ -181,8 +183,8 @@
 # window specifics:
 #
     for_window [app_id="pavucontrol"] floating enable
-    for_window [title=".*scratchpad - Code - OSS$"] move scratchpad
-    for_window [title=".*scratchpad - Visual Studio Code$"] move scratchpad
+    for_window [app_id="qalculate-gtk"] move scratchpad, scratchpad show, resize set 800 800
+    for_window [title=".*scratchpad - (Code - OSS|Visual Studio Code)$"] move scratchpad, scratchpad show
 
 
 #
@@ -242,7 +244,6 @@
     # prepare scratchpade
     set $scratch_dir .local/share/scratchpad
     exec mkdir -p $scratch_dir
-    exec code -n $scratch_dir
 
     exec mako
     exec nextcloud
