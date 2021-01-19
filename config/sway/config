@@ -54,8 +54,8 @@
         # reload the configuration file
         $mod+Shift+r reload
 
-	# launch chrome
-        $mod+g exec google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode
+        # launch chrome
+        $mod+g exec google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode --enable-features=UseOzonePlatform --ozone-platform=wayland
     }
 
 #
