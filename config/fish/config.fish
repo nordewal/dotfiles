@@ -71,6 +71,9 @@ alias fd="fdfind"
 alias la="ls -lsha --color $argv"
 alias ll="ls -lsh --color $argv"
 
+# misc abbr
+abbr -a vimdiff 'nvim -d'
+
 # set locales
 if status -l; and test -r /etc/locale.conf
     while read -l kv
