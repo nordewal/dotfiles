@@ -47,6 +47,10 @@
         $mod+d         exec "wofi --show drun"
         $mod+Shift+d   exec "wofi --show run"
 
+        # monitors
+        --locked $mod+k         exec "killall -9 kanshi; kanshi"
+        --locked $mod+m         output eDP-1 enable
+
         # mako
         $mod+Delete    exec makoctl dismiss
         $mod+backslash exec makoctl invoke
@@ -249,6 +253,7 @@
 
     exec mako
     exec nextcloud
+    exec kanshi
     #exec redshift-gtk -O 4000
 
 #

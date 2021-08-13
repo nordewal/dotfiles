@@ -1,0 +1,22 @@
+profile home {
+  output eDP-1 disable
+  output "BenQ Corporation BenQ PD3200U PCK00700019" enable position 0,0
+  output "Dell Inc. DELL U2410 F525M06L06LL" enable position 3840,100 transform 90
+  exec swaymsg workspace "10:   10   ", move workspace to "'Dell Inc. DELL U2410 F525M06L06LL'"
+  exec swaymsg workspace "1:   1   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
+  exec "killall -9 mako; ~/.dotfiles_custom/bin/mako"
+}
+profile {
+  output eDP-1 disable
+  output DP-1 enable position 0,0
+  exec "killall -9 mako; ~/.dotfiles_custom/bin/mako"
+}
+profile {
+  output eDP-1 disable
+  output DP-2 enable position 0,0
+  exec "killall -9 mako; ~/.dotfiles_custom/bin/mako"
+}
+profile {
+  output eDP-1 enable
+  exec "killall -9 mako; ~/.dotfiles_custom/bin/mako"
+}
