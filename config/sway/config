@@ -59,7 +59,7 @@
         $mod+Shift+r reload
 
         # launch chrome
-        $mod+g exec google-chrome-stable --enable-features=WebUIDarkMode,NativeNotifications --force-dark-mode
+        $mod+g exec "google-chrome-stable --enable-features=WebUIDarkMode,NativeNotifications --force-dark-mode"
     }
 
 #
