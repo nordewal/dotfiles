@@ -17,6 +17,16 @@ profile {
   exec "killall -9 mako; mako"
 }
 profile {
+  output eDP-1 disable
+  output DP-3 enable position 0,0
+  exec "killall -9 mako; mako"
+}
+profile {
+  output eDP-1 disable
+  output DP-4 enable position 0,0
+  exec "killall -9 mako; mako"
+}
+profile {
   output eDP-1 enable
   exec "killall -9 mako; mako"
 }

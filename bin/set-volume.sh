@@ -3,7 +3,7 @@
 new_volume=$1
 
 # Get a a list of all sinks
-sinks=$(pacmd list-sinks | grep index | cut -d':' -f2 | cut -d' ' -f2)
+sinks=$(pactl list short sinks | awk '{print $1}')
 
 for sink in $sinks; do
   if [[ "$new_volume" == "mute" ]]; then
