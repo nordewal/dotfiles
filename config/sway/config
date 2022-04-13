@@ -28,6 +28,8 @@
              timeout 2 "shuf -n1 -e ~/.dotfiles/screensavers/*| xargs -i ln -sf {} ~/.dotfiles/screensaver" \
              timeout 600 "notify-send -u critical -t 15000 'Screen Lock' 'Locking in 15 seconds'" \
              timeout 615 "$locker" \
+             timeout 1800 'swaymsg "output * dpms off"' \
+             resume 'swaymsg "output * dpms on"' \
              before-sleep "$locker"
 
 #
