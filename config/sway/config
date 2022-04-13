@@ -56,8 +56,6 @@
         # mako
         $mod+Delete    exec makoctl dismiss
         $mod+backslash exec makoctl invoke
-        $mod+Shift+t exec "killall -9 mako; mako"
-        $mod+t exec "notify-send -t 200 'test'"
 
         # reload the configuration file
         $mod+Shift+r reload
@@ -191,8 +189,8 @@
 # window specifics:
 #
     for_window [app_id="pavucontrol"] floating enable
-    for_window [app_id="qalculate-gtk"] move scratchpad, scratchpad show, resize set 800 800
-    for_window [title=".*scratchpad - (Code - OSS|Visual Studio Code)$"] move scratchpad, scratchpad show
+    for_window [app_id="qalculate-gtk"] move scratchpad, resize set 800 800
+    for_window [title=".*scratchpad - (Code - OSS|Visual Studio Code)$"] move scratchpad
 
 
 #
