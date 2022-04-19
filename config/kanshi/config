@@ -6,6 +6,13 @@ profile home {
   exec swaymsg workspace "1:   1   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
   exec "killall -9 mako; mako"
 }
+profile work {
+  output "Unknown GOOGLE JN32A 08030043" enable position 0,0
+  output "Hewlett Packard HP Z24i CN46050N2W" enable position 3840,100 transform 90
+  exec swaymsg workspace "10:   10   ", move workspace to "'Hewlett Packard HP Z24i CN46050N2W'"
+  exec swaymsg workspace "1:   1   ", move workspace to "'Unknown GOOGLE JN32A 08030043'"
+  exec "killall -9 mako; mako"
+}
 profile {
   output eDP-1 disable
   output DP-1 enable position 0,0
