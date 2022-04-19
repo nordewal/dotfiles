@@ -128,6 +128,8 @@
 
         XF86MonBrightnessDown       exec brightnessctl set 5%-
         XF86MonBrightnessUp         exec brightnessctl set +5%
+
+        XF86WLAN                    exec $HOME/.dotfiles/bin/toggle-wifi.sh
     }
     bindsym $mod+XF86AudioMute       exec pavucontrol
 
@@ -253,7 +255,7 @@
 
     exec mako
     exec nextcloud
-    exec kanshi
+    #exec kanshi
     #exec redshift-gtk -O 4000
 
 #
