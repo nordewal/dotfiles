@@ -257,7 +257,7 @@
 
     exec mako
     exec nextcloud
-    #exec kanshi
+    exec kanshi
     #exec redshift-gtk -O 4000
 
 #
