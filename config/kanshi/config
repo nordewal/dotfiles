@@ -2,7 +2,16 @@ profile home {
   output "BenQ Corporation BenQ PD3200U PCK00700019" enable position 0,0 mode 3840x2160@60Hz
   output eDP-1 disable
   output "Dell Inc. DELL U2410 F525M06L06LL" enable position 3840,100 transform 90 mode 1920x1080@60Hz
+  exec swaymsg workspace "2:   2   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
+  exec swaymsg workspace "3:   3   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
+  exec swaymsg workspace "4:   4   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
+  exec swaymsg workspace "5:   5   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
+  exec swaymsg workspace "6:   6   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
+  exec swaymsg workspace "7:   7   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
+  exec swaymsg workspace "8:   8   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
+  exec swaymsg workspace "9:   9   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
   exec swaymsg workspace "10:   10   ", move workspace to "'Dell Inc. DELL U2410 F525M06L06LL'"
+  # workspace 1 is last so the focus ends up on it
   exec swaymsg workspace "1:   1   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
   exec "killall -9 mako; mako"
 }

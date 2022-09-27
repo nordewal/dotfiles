@@ -56,6 +56,8 @@
         # mako
         $mod+Delete    exec makoctl dismiss
         $mod+backslash exec makoctl invoke
+        $mod+Shift+t exec "killall -9 mako; mako"
+        $mod+t exec "notify-send -t 200 'test'"
 
         # reload the configuration file
         $mod+Shift+r reload
