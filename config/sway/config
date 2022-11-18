@@ -251,7 +251,7 @@
 #
 # autostart:
 #
-    # prepare scratchpade
+    # prepare scratchpad
     set $scratch_dir .local/share/scratchpad
     exec mkdir -p $scratch_dir
     exec code -n $scratch_dir
@@ -260,6 +260,11 @@
     exec mako
     exec nextcloud
     exec kanshi
+    exec safeeyes --enable
+    # https://github.com/flameshot-org/flameshot/blob/b4300d303d956794a5ae195100e9073a43d4f095/docs/Sway%20and%20wlroots%20support.md#basic-steps
+    exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+    exec dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
     #exec redshift-gtk -O 4000
 
 #
