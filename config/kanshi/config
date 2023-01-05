@@ -1,7 +1,7 @@
 profile home {
   output "BenQ Corporation BenQ PD3200U PCK00700019" enable position 0,0 mode 3840x2160@60Hz
   output eDP-1 disable
-  output "Dell Inc. DELL U2410 F525M06L06LL" enable position 3840,100 transform 90 mode 1920x1080@60Hz
+  output "Dell Inc. DELL U2410 F525M06L06LL" enable position 3840,100 transform 90 mode 1920x1200@59.950Hz
   exec swaymsg workspace "2:   2   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
   exec swaymsg workspace "3:   3   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
   exec swaymsg workspace "4:   4   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
