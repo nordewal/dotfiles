@@ -63,7 +63,7 @@
         $mod+Shift+r reload
 
         # launch chrome
-        $mod+g exec "google-chrome-stable --enable-features=WebUIDarkMode,NativeNotifications --force-dark-mode --ozone-platform-hint=auto"
+        $mod+g exec "google-chrome-stable --enable-features=WebUIDarkMode,NativeNotifications --force-dark-mode"
     }
 
 #
