@@ -4,7 +4,7 @@
     set $mod Mod4
 
     # text rendering and scalability on retina/hidpi displays (thanks to pango).
-    set $font Source Code Pro Regular
+    set $font Source Code Pro Regular 10
     set $icon_font FontAwesome 10
     font pango:$font
 
@@ -63,7 +63,7 @@
         $mod+Shift+r reload
 
         # launch chrome
-        $mod+g exec "google-chrome-stable --enable-features=WebUIDarkMode,NativeNotifications --force-dark-mode"
+        $mod+g exec "google-chrome-stable --enable-features=WebUIDarkMode,NativeNotifications --force-dark-mode --ozone-platform-hint=auto"
     }
 
 #
