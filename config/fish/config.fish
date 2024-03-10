@@ -81,6 +81,14 @@ if status -l; and test -r /etc/locale.conf
     end </etc/locale.conf
 end
 
+# start ssh-agent if not running
+if test -z (pgrep ssh-agent)
+  eval (ssh-agent -c) > /dev/null
+  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+  set -Ux SSH_AGENT_PID $SSH_AGENT_PID
+  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+end
+
 # include custom dotfiles
 if test -e ~/.config/fish/config_local.fish
   source ~/.config/fish/config_local.fish
