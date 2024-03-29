@@ -43,7 +43,8 @@
         $mod+q kill
 
         # connect to wifi
-        $mod+i exec $term -e "nmtui"
+        $mod+i       exec networkmanager_dmenu
+        $mod+Shift+i exec $term -e "nmtui"
 
         # use wofi as dmenu replacement
         $mod+d         exec "wofi --show drun"
