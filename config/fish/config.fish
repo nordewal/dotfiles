@@ -76,9 +76,9 @@ abbr -a vimdiff 'nvim -d'
 
 # set locales
 if status -l; and test -r /etc/locale.conf
-    while read -l kv
+    for kv in (grep -Ev '^\s*($|#.*)' /etc/locale.conf)
         set -gx (string split "=" -- $kv)
-    end < (grep -Ev "^\s*($|#.*)" /etc/locale.conf)
+    end
 end
 
 # start ssh-agent if not running
