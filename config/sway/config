@@ -50,6 +50,9 @@
         $mod+d         exec "wofi --show drun"
         $mod+Shift+d   exec "wofi --show run"
 
+        # file launcher
+        $mod+e         exec "xdg-open ~"
+
         # monitors
         --locked $mod+k         exec "killall -9 kanshi; kanshi"
         --locked $mod+m         output eDP-1 enable
@@ -93,7 +96,7 @@
 
         # change container layout (stacked, tabbed, toggle split)
         $mod+w layout tabbed
-        $mod+e layout toggle split
+        $mod+r layout toggle split
 
         # toggle tiling / floating
         $mod+Shift+space floating toggle
