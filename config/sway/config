@@ -275,19 +275,8 @@
 # status bar:
 #
     bar {
-	strip_workspace_numbers yes
         position                top
-        status_command          i3status
-        font                    pango:$font, $icon_font
-      colors {
-        separator          #666666
-        background         #222222
-        statusline         #dddddd
-        focused_workspace  #0088CC #0088CC #ffffff
-        active_workspace   #333333 #333333 #ffffff
-        inactive_workspace #333333 #333333 #888888
-        urgent_workspace   #2f343a #900000 #ffffff
-      }
+        swaybar_command waybar
     }
 
 #

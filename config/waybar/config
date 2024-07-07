@@ -1,0 +1,94 @@
+{
+    "height": 24, // Waybar height (to be removed for auto height)
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+    ],
+    "modules-center": [
+        "clock",
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "network",
+        "pulseaudio",
+        "temperature",
+        "cpu",
+        "load",
+        "battery",
+        "tray",
+    ],
+
+    // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+    },
+    "sway/mode": {
+        "format": "{}"
+    },
+    "clock": {
+        "tooltip-format": "<big><tt>{calendar}</tt></big>",
+        "format": "{:%d.%m.%Y %H:%M:%S}",
+        "interval": 1,
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "network": {
+        "format-wifi": "  {ipaddr} - {essid} ({signalStrength}%)",
+        "format-ethernet": "  {ipaddr}",
+        "tooltip-format": " {ifname} via {gwaddr}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
+    },
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": " {icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "kitty pw-top"
+    },
+    "temperature": {
+        "format-critical": "{icon} {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "cpu": {
+        "interval": 1,
+        "format": " {usage}%",
+    },
+    "load": {
+        "interval": 1,
+        "format": "{load1} {load5} {load15}",
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 15,
+            "critical": 5,
+        },
+        "interval": 1,
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+}
