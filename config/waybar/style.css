@@ -1,7 +1,7 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: Dejavu Sans Mono, FontAwesome, Material Icons, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   min-height: 0;
   color: #f8f8f2;
 }
@@ -77,7 +77,7 @@ button:hover {
     background-color: rgba(120, 31, 25, 0.9);
 }
 #clock {
-    background-color: rgba(61, 86, 86, 0.6);
+    background-color: rgba(61, 86, 86, 0.4);
     font-size: 1rem;
     padding-top: 0.3rem;
     min-width: 10rem;
@@ -90,7 +90,7 @@ button:hover {
     color: rgb(45, 52, 54);
 }
 #network {
-    background-color: rgba(0, 225, 217, 0.3);
+    background-color: rgba(0, 225, 217, 0.15);
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -98,24 +98,24 @@ button:hover {
     background-color: rgba(120, 31, 25, 0.9);
 }
 #pulseaudio {
-    background-color: rgba(189, 147, 249, 0.4);
+    background-color: rgba(241, 250, 140, 0.2);
     min-width: 7rem;
 }
 #temperature {
-    background-color: rgba(255, 121, 198, 0.3);
+    background-color: rgba(255, 121, 198, 0.2);
     min-width: 4rem;
 }
 #cpu {
-    background-color: rgba(241, 250, 140, 0.3);
+    background-color: rgba(255, 184, 108, 0.25);
     min-width: 4rem;
 }
 #load {
-    background-color: rgba(255, 184, 108, 0.4);
+    background-color: rgba(189, 147, 249, 0.2);
     padding-top: 0.2rem;
     min-width: 7rem;
 }
 #battery {
-    background-color: rgba(38, 166, 91, 0.7);
+    background-color: rgba(38, 166, 91, 0.4);
     min-width: 4rem;
 }
 
