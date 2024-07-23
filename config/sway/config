@@ -241,15 +241,25 @@
 #
 # devices:
 #
+    input * {
+        xkb_options compose:ralt
+        xkb_numlock enabled
+        scroll_factor 2
+    }
+
     input type:pointer {
         accel_profile adaptive
         pointer_accel -0.3
     }
 
-    input * {
-        xkb_options compose:ralt
-        xkb_numlock enabled
-        scroll_factor 2
+    input type:touchpad {
+        accel_profile adaptive
+        pointer_accel 0.1
+    }
+
+    input "2:10:TPPS/2_Elan_TrackPoint" {
+        accel_profile adaptive
+        pointer_accel 0.3
     }
 
 #
