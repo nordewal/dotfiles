@@ -15,3 +15,9 @@ border-color=#c21808f0
 [app-name="Google Chrome"]
 background-color=#285577f0
 border-color=#4C7899f0
+
+# Nextcloud connection notifcations are annoying
+[app-name="Nextcloud" body="Connection timed out"]
+on-notify=dismiss
+[app-name="Nextcloud" body="Host not found"]
+on-notify=dismiss
