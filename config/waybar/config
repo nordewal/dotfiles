@@ -43,10 +43,11 @@
     "network": {
         "format-wifi": "  ({signalStrength}%) {ipaddr} - {essid}",
         "format-ethernet": "  {ipaddr}",
-        "tooltip-format": " {ifname} via {gwaddr}",
+        "tooltip-format": "{ifname} via {gwaddr}\r\rUp: {bandwidthUpBytes}\rDn: {bandwidthDownBytes}",
         "format-linked": " {ifname} (No IP)",
         "format-disconnected": "⚠ Disconnected",
         "max-length": 35,
+        "interval": 1,
     },
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
