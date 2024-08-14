@@ -41,9 +41,9 @@
         }
     },
     "network": {
-        "format-wifi": "  ({signalStrength}%) {ipaddr} - {essid}",
+        "format-wifi": "  {signalStrength}% - {essid}",
         "format-ethernet": "  {ipaddr}",
-        "tooltip-format": "{ifname} via {gwaddr}\r\rUp: {bandwidthUpBytes}\rDn: {bandwidthDownBytes}",
+        "tooltip-format": "{ipaddr} @ {ifname}\r via {gwaddr}\r\rUp: {bandwidthUpBytes}\rDn: {bandwidthDownBytes}",
         "format-linked": " {ifname} (No IP)",
         "format-disconnected": "⚠ Disconnected",
         "max-length": 35,
