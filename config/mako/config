@@ -19,3 +19,6 @@ border-color=#4C7899f0
 # Nextcloud connection notifcations are annoying
 [app-name="Nextcloud" summary="Connection issue"]
 on-notify=dismiss
+
+[app-name="Slack"]
+default-timeout=10000
