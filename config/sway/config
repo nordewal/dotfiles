@@ -225,12 +225,12 @@
     set $screenshot_dir ~/Pictures/
     exec mkdir -p $screenshot_dir
 
-    set $mode_screenshot Screenshot (s)elect region (p)aint on it; use Shift to copy to clipboard
+    set $mode_screenshot Screenshot (s)elect region (p)aint on it; use Shift to save to $screenshot_dir
     mode "$mode_screenshot" {
-        bindsym s exec grim -g "$(slurp)" $screenshot_dir/$(date +'screen_%Y-%m-%d_%H-%M-%S.png'), mode "default"
-        bindsym Shift+s exec grim -g "$(slurp)" - |wl-copy, mode "default"
-        bindsym p exec grim -g "$(slurp)" - |swappy -f $screenshot_dir/$(date +'screen_%Y-%m-%d_%H-%M-%S.png'), mode "default"
-        bindsym Shift+p exec grim -g "$(slurp)" - |swappy -f -, mode "default"
+        bindsym s exec grim -g "$(slurp)" - |wl-copy, mode "default"
+        bindsym Shift+s exec grim -g "$(slurp)" $screenshot_dir/$(date +'screen_%Y-%m-%d_%H-%M-%S.png'), mode "default"
+        bindsym p exec grim -g "$(slurp)" - |swappy -f -, mode "default"
+        bindsym Shift+p exec grim -g "$(slurp)" - |swappy -f $screenshot_dir/$(date +'screen_%Y-%m-%d_%H-%M-%S.png'), mode "default"
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
