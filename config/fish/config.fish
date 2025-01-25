@@ -1,8 +1,5 @@
-# dotfiles related stuff
-set -gx PATH $PATH ~/.dotfiles/bin
-
-# user's bin
-set -gx PATH $PATH ~/bin
+fish_add_path ~/.dotfiles/bin
+fish_add_path ~/bin
 
 # no greeting
 set fish_greeting ""

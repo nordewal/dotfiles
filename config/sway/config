@@ -9,7 +9,7 @@
     font pango:$font
 
     # terminal
-    set $term /usr/bin/kitty
+    set $term /usr/bin/alacritty
 
     # Use Mouse+$mod to drag floating windows to their wanted position
     floating_modifier $mod
@@ -67,7 +67,7 @@
         $mod+Shift+r reload
 
         # launch chrome
-        $mod+g exec "google-chrome-stable --enable-features=WebUIDarkMode,NativeNotifications --force-dark-mode"
+        $mod+g exec "google-chrome-stable --enable-features=WebUIDarkMode,NativeNotifications --force-dark-mode  --profile-directory=Default"
     }
 
 #
@@ -280,6 +280,10 @@
     exec dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
     #exec redshift-gtk -O 4000
+
+    # set dark theme
+    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 #
 # status bar:
