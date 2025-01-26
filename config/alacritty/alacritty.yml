@@ -1,0 +1,10 @@
+window:
+  padding:
+    x: 2
+    y: 2
+scrolling:
+ history: 100000
+ multiplier: 5
+font:
+  size: 10.5
+
