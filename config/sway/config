@@ -14,8 +14,9 @@
     # Use Mouse+$mod to drag floating windows to their wanted position
     floating_modifier $mod
 
-    # window border
+    # design
     default_border pixel 1
+    output * bg #222222 solid_color
 
     focus_follows_mouse yes
     focus_on_window_activation focus
@@ -118,11 +119,11 @@
 #
     bindsym --locked {
 
-        XF86AudioRaiseVolume        exec $HOME/.dotfiles/bin/set-volume.sh +5%
-        $mod+KP_Add                 exec $HOME/.dotfiles/bin/set-volume.sh +5%
+        XF86AudioRaiseVolume        exec $HOME/.dotfiles/bin/set-volume.sh +2%
+        $mod+KP_Add                 exec $HOME/.dotfiles/bin/set-volume.sh +2%
 
-        XF86AudioLowerVolume        exec $HOME/.dotfiles/bin/set-volume.sh -5%
-        $mod+KP_Subtract            exec $HOME/.dotfiles/bin/set-volume.sh -5%
+        XF86AudioLowerVolume        exec $HOME/.dotfiles/bin/set-volume.sh -2%
+        $mod+KP_Subtract            exec $HOME/.dotfiles/bin/set-volume.sh -2%
 
         XF86AudioMute               exec $HOME/.dotfiles/bin/set-volume.sh mute
         $mod+KP_Multiply            exec $HOME/.dotfiles/bin/set-volume.sh mute
@@ -199,6 +200,8 @@
     for_window [app_id="pavucontrol"] floating enable
     for_window [app_id="qalculate-gtk"] move scratchpad, resize set 800 800
     for_window [title=".*scratchpad - (Code - OSS|Visual Studio Code)$"] move scratchpad
+    # From https://github.com/flameshot-org/flameshot/blob/master/docs/Sway%20and%20wlroots%20support.md
+    for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
 
 
 #
@@ -244,7 +247,7 @@
     input * {
         xkb_options compose:ralt
         xkb_numlock enabled
-        scroll_factor 2
+        scroll_factor 1
     }
 
     input type:pointer {
@@ -276,8 +279,8 @@
     exec kanshi
     exec safeeyes --enable
     # https://github.com/flameshot-org/flameshot/blob/b4300d303d956794a5ae195100e9073a43d4f095/docs/Sway%20and%20wlroots%20support.md#basic-steps
-    exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-    exec dbus-update-activation-environment 2>/dev/null && \
+    exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+    exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
     #exec redshift-gtk -O 4000
 
