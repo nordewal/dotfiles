@@ -285,8 +285,8 @@
     #exec redshift-gtk -O 4000
 
     # set dark theme
-    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+    exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 #
 # status bar:
