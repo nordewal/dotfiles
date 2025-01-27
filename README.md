@@ -25,8 +25,7 @@ if status --is-interactive
 end
 ```
 
-## Enable deoplete
+## Install vim plugins
 
-1. Install neovim!!
 2. open vim
-3. run ':UpdateRemotePlugins'
+3. run ':PlugInstall'
