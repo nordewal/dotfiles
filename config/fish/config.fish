@@ -1,5 +1,6 @@
 fish_add_path ~/.dotfiles/bin
 fish_add_path ~/bin
+fish_add_path ~/.local/bin
 
 # no greeting
 set fish_greeting ""
