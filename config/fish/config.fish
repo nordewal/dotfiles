@@ -53,6 +53,9 @@ alias vim="nvim -p"
 set -x EDITOR nvim -p
 set -x VISUAL_EDITOR nvim -p
 
+# helix
+alias hx="helix"
+
 # docker stuff
 set -x DOCKER_ID_USER "nordewal"
 abbr -a dc 'docker-compose '
