@@ -42,36 +42,17 @@ nmap <F11> :NERDTreeTabsClose
 " F12: NERDTroggle
 nmap <F12> :NERDTreeFocusToggle
 
-" load pathogen modules
-execute pathogen#infect()
+call plug#begin()
 
-" deoplete config
-let g:deoplete#enable_at_startup = 1
-" deoplete tab-complete
-inoremap <silent><expr> <C-n> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
-inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+Plug 'hashivim/vim-terraform'
+Plug 'vim-airline/vim-airline'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'dag/vim-fish'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree'
 
-" ultisnips config
-let g:UltiSnipsExpandTrigger="<c-e>"
-let g:UltiSnipsJumpForwardTrigger="<c-f>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-
-
-" syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_highlighting = 1
-" let g:syntastic_auto_jump = 3
-
-map <C-s> :w:SyntasticCheck
-map <C-q> :SyntasticReset
-
+call plug#end()
 
 " true color for neovim
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
@@ -117,40 +98,6 @@ if has("autocmd")
      \| exe "normal! g'\"" | endif
 endif
 
-
-if has("autocmd")
-	" perl
-	augroup perl
-		au FileType perl setlocal equalprg=perltidy\ -bl\ -q\ -l=260\ -pt=2\ -sbt=2\ -bt=2\ -bbt=2\ -nsfs\ -nwls=\".\"\ -nwrs=\".\"\ -ole=unix\ -iob\ -et=4\ -i=2
-	augroup END
-
-	" xml
-	augroup xml
-		au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
-	augroup END
-
-	" puppet
-	augroup puppet
-		au FileType puppet setlocal equalprg=~/.dev/puppet-tidy
-		au FileType puppet nmap <F4> :w:!puppet-lint %
-		au FileType puppet nmap <F5> :w:!ruby -c %
-		au FileType puppet nmap <F6> :w:!rvm all do bundle exec rake
-	augroup END
-
-	" ruby
-	augroup ruby
-		au FileType ruby nmap <F4> :w:!puppet-lint %
-		au FileType ruby nmap <F5> :w:!ruby -c %
-		au FileType ruby nmap <F6> :w:!rvm all do bundle exec rake
-	augroup END
-
-	" markdown
-	augroup md
-		autocmd FileType mkd setlocal tw=0
-		autocmd FileType mkd setlocal nocursorline
-	augroup END
-endif
-
 " CTRL-P
 " let g:ctrlp_by_filename = 1
 let g:ctrlp_open_new_file = 't'
@@ -162,7 +109,6 @@ let g:ctrlp_prompt_mappings = {
 
 " airline
 let g:airline_powerline_fonts = 1
-
 
 " insert mode
 map <C-t> <Esc>:tabnew

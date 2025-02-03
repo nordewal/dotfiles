@@ -6,7 +6,7 @@ bash -c "$(curl -fsSL https://raw.github.com/nordewal/dotfiles/master/bin/dotfil
 
 ## Install the following packages
 ```
-code fish gnome-keyring grim groff keepassxc alacritty mako neovim networkmanager pavucontrol playerctl pipewire pipewire-pulse slurp swappy sway swayidle waybar swaylock wlrctl ttf-fira-code ttf-font-awesome wl-clipboard wofi safeeyes xdg-desktop-portal-wlr grim networkmanager-dmenu
+code fish gnome-keyring grim groff keepassxc alacritty mako neovim networkmanager pavucontrol playerctl pipewire pipewire-pulse slurp swappy sway swayidle waybar swaylock wlrctl ttf-fira-code ttf-font-awesome wl-clipboard wofi safeeyes xdg-desktop-portal-wlr grim networkmanager-dmenu bat fd-find fzf
 ```
 
 ## Run sway
@@ -25,8 +25,7 @@ if status --is-interactive
 end
 ```
 
-## Enable deoplete
+## Install vim plugins
 
-1. Install neovim!!
 2. open vim
-3. run ':UpdateRemotePlugins'
+3. run ':PlugInstall'

@@ -16,27 +16,27 @@ profile home-debian {
   exec swaymsg workspace "1:   1   ", move workspace to "'BenQ Corporation BenQ PD3200U PCK00700019'"
   exec "killall -9 mako; mako"
 }
-profile {
+profile DP-1 {
   output eDP-1 disable
   output DP-1 enable position 0,0
   exec "killall -9 mako; mako"
 }
-profile {
+profile DP-2 {
   output eDP-1 disable
   output DP-2 enable position 0,0
   exec "killall -9 mako; mako"
 }
-profile {
+profile DP-3 {
   output eDP-1 disable
   output DP-3 enable position 0,0
   exec "killall -9 mako; mako"
 }
-profile {
+profile DP-4 {
   output eDP-1 disable
   output DP-4 enable position 0,0
   exec "killall -9 mako; mako"
 }
-profile {
+profile notebook-only{
   output eDP-1 enable
   exec "killall -9 mako; mako"
 }
