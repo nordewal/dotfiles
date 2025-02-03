@@ -1,7 +1,7 @@
 profile home-arch {
-  output "BenQ Corporation BenQ PD3200U PCK00700019" enable position 0,0 mode 3840x2160@60Hz
+  output "BNQ BenQ PD3200U PCK00700019" enable position 0,0 mode 3840x2160@60Hz
   output eDP-1 disable
-  output "*U2410*" enable position 3840,100 transform 90 mode 1920x1200@59.950Hz
+  output "Dell Inc. DELL U2410 F525M06L06LL" enable position 3840,100 transform 90 mode 1920x1200@59.950Hz
   # TODO: use alias once available (in kanshi 1.7)
   exec swaymsg workspace "10:   10   ", move workspace to "'Dell Inc. DELL U2410 F525M06L06LL'"
   exec swaymsg workspace "1:   1   ", move workspace to "'BNQ BenQ PD3200U PCK00700019'"
