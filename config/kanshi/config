@@ -36,7 +36,7 @@ profile DP-4 {
   output DP-4 enable position 0,0
   exec "killall -9 mako; mako"
 }
-profile notebook-only{
+profile notebook-only {
   output eDP-1 enable
   exec "killall -9 mako; mako"
 }
