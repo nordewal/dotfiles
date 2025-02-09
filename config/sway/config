@@ -9,7 +9,7 @@
     font pango:$font
 
     # terminal
-    set $term /usr/bin/alacritty
+    set $term alacritty
 
     # Use Mouse+$mod to drag floating windows to their wanted position
     floating_modifier $mod
