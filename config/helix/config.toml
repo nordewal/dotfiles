@@ -8,3 +8,31 @@ t = ":sh alacritty"
 
 [editor.file-picker]
 hidden = false
+
+[keys.normal]
+# Some nice Helix stuff
+C-h = "select_prev_sibling"
+C-j = "shrink_selection"
+C-k = "expand_selection"
+C-l = "select_next_sibling"
+
+# Muscle memory
+"{" = ["goto_prev_paragraph", "collapse_selection"]
+"}" = ["goto_next_paragraph", "collapse_selection"]
+0 = "goto_line_start"
+"$" = "goto_line_end"
+G = "goto_file_end"
+"%" = "match_brackets"
+C = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection", "insert_mode"]
+D = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection"]
+
+[keys.select]
+# Muscle memory
+"{" = ["extend_to_line_bounds", "goto_prev_paragraph"]
+"}" = ["extend_to_line_bounds", "goto_next_paragraph"]
+0 = "goto_line_start"
+"$" = "goto_line_end"
+G = "goto_file_end"
+D = ["extend_to_line_bounds", "delete_selection", "normal_mode"]
+C = ["goto_line_start", "extend_to_line_bounds", "change_selection"]
+"%" = "match_brackets"
