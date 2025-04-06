@@ -55,7 +55,7 @@
         $mod+e         exec "xdg-open ~"
 
         # monitors
-        --locked $mod+k         exec "killall -9 kanshi; kanshi; killall -9 waybar; waybar -b bar-0"
+        --locked $mod+k         exec "killall -9 kanshi; kanshi"
         --locked $mod+m         output eDP-1 enable
 
         # mako
