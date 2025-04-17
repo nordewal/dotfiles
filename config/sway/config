@@ -9,7 +9,7 @@
     font pango:$font
 
     # terminal
-    set $term alacritty
+    set $term kitty
 
     # Use Mouse+$mod to drag floating windows to their wanted position
     floating_modifier $mod
@@ -20,7 +20,6 @@
 
     focus_follows_mouse yes
     focus_on_window_activation focus
-
 
     # lock screen after 300 seconds, and send a warning 15s before that
     set $locker swaylock -f -i ~/.dotfiles/screensaver
@@ -59,10 +58,11 @@
         --locked $mod+m         output eDP-1 enable
 
         # mako
-        $mod+Delete    exec makoctl dismiss
-        $mod+backslash exec makoctl invoke
-        $mod+Shift+t exec "killall -9 mako; mako"
-        $mod+t exec "notify-send -t 200 'test'"
+        $mod+Delete       exec makoctl dismiss
+        $mod+Shift+Delete exec makoctl restore
+        $mod+backslash    exec makoctl invoke
+        $mod+Shift+t      exec "killall -9 mako; mako"
+        $mod+t            exec "notify-send -t 200 'test'"
 
         # reload the configuration file
         $mod+Shift+r reload

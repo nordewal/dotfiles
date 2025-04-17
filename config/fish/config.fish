@@ -17,30 +17,32 @@ git config --global alias.subst "submodule status --recursive"
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # no space after abbreviations
-bind " " expand-abbr or self-insert
+# bind " " expand-abbr or self-insert
 
 # git abbreviations
-abbr -a g 'git '
-abbr -a ga 'git add '
-abbr -a gp 'git push '
-abbr -a gpa 'git push --all '
-abbr -a gu 'git pull '
-abbr -a gf 'git fetch '
-abbr -a gs 'git status '
-abbr -a gd 'git diff '
-abbr -a gdc 'git diff --cached '
-abbr -a gm 'git commit -m '
-abbr -a gma 'git commit -am \''
-abbr -a gb 'git branch '
-abbr -a gba 'git branch -a '
-abbr -a gc 'git checkout '
-abbr -a gcb 'git checkout -b '
-abbr -a grv 'git remote -v '
+abbr -a g 'git'
+abbr -a ga 'git add'
+abbr -a gp 'git push'
+abbr -a gpa 'git push --all'
+abbr -a gu 'git pull'
+abbr -a gf 'git fetch'
+abbr -a gs 'git status'
+abbr -a gd 'git diff'
+abbr -a gt 'git stash'
+abbr -a gta 'git stash apply'
+abbr -a gdc 'git diff --cached'
+abbr -a gm 'git commit -m'
+abbr -a gma 'git commit -am'
+abbr -a gb 'git branch'
+abbr -a gba 'git branch -a'
+abbr -a gc 'git checkout'
+abbr -a gcb 'git checkout -b'
+abbr -a grv 'git remote -v'
 abbr -a gcd 'git rev-parse 2>/dev/null && cd "./$(git rev-parse --show-cdup)"'
-abbr -a gl 'git log '
-abbr -a glg 'git lg '
-abbr -a glol 'git lol '
-abbr -a glola 'git lola '
+abbr -a gl 'git log'
+abbr -a glg 'git lg'
+abbr -a glol 'git lol'
+abbr -a glola 'git lola'
 abbr -a gua "find . -maxdepth 3 -type d -name .git | xargs dirname |xargs -P 40 -n 1 -I '{}' sh -c 'cd {}; echo {}; git pull'"
 abbr -a gsa "find . -maxdepth 3 -type d -name .git | xargs dirname |xargs -n 1 -I '{}' sh -c 'cd {}; echo {}; git status'"
 
