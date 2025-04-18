@@ -6,7 +6,13 @@ bash -c "$(curl -fsSL https://raw.github.com/nordewal/dotfiles/master/bin/dotfil
 
 ## Install the following packages
 ```
-code fish gnome-keyring grim groff keepassxc alacritty mako neovim networkmanager pavucontrol playerctl pipewire pipewire-pulse slurp swappy sway swayidle waybar swaylock wlrctl ttf-fira-code ttf-font-awesome wl-clipboard wofi safeeyes xdg-desktop-portal-wlr grim networkmanager-dmenu bat fd-find fzf
+code fish gnome-keyring grim groff keepassxc alacritty mako neovim networkmanager pavucontrol playerctl pipewire pipewire-pulse slurp swappy sway swayidle waybar swaylock wlrctl ttf-fira-code wl-clipboard wofi safeeyes xdg-desktop-portal-wlr grim networkmanager-dmenu bat fd-find fzf
+
+## Install Nerd font
+
+1.) Download JetBrains Mono [Nerd Font](http://nerdfonts.com/)
+2.) Unzip and copy to `~/.fonts`
+3.) Run the command `fc-cache -fv` to manually rebuild the font cache
 ```
 
 ## Run sway
