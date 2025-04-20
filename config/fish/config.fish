@@ -20,7 +20,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 # bind " " expand-abbr or self-insert
 
 # git abbreviations
-abbr -a g 'git'
+abbr -a g git
 abbr -a ga 'git add'
 abbr -a gp 'git push'
 abbr -a gpa 'git push --all'
@@ -50,26 +50,26 @@ abbr -a gsa "find . -maxdepth 3 -type d -name .git | xargs dirname |xargs -n 1 -
 alias gbs='git branch | perl -ne '"'"'/^\* (?:\(detached from (.*)\)|(.*))/ && print "$1$2"'"'"''
 
 # vim related stuff
-alias vi="nvim -p"
-alias vim="nvim -p"
-set -x EDITOR nvim -p
-set -x VISUAL_EDITOR nvim -p
+alias n="nvim"
+alias nd="nvim ~/dev"
+set -x EDITOR nvim
+set -x VISUAL_EDITOR nvim
 
 # helix
 alias hx="helix"
 
 # docker stuff
-set -x DOCKER_ID_USER "nordewal"
+set -x DOCKER_ID_USER nordewal
 abbr -a dc 'docker-compose '
 abbr -a dce 'docker-compose exec '
-abbr -a dklc 'docker ps -l'  # List last Docker container
-abbr -a dklcid 'docker ps -l -q'  # List last Docker container ID
-abbr -a dklcip 'docker inspect -f "{{.NetworkSettings.IPAddress}}" $(docker ps -l -q)'  # Get IP of last Docker container
-abbr -a dkps 'docker ps'  # List running Docker containers
-abbr -a dkpsa 'docker ps -a'  # List all Docker containers
-abbr -a dki 'docker images'  # List Docker images
-abbr -a dkrmac 'docker rm (docker ps -a -q)'  # Delete all Docker containers
-abbr -a dkrmdi 'docker images -q -f dangling=true |xargs -r docker rmi'  # Delete all dangling Docker images
+abbr -a dklc 'docker ps -l' # List last Docker container
+abbr -a dklcid 'docker ps -l -q' # List last Docker container ID
+abbr -a dklcip 'docker inspect -f "{{.NetworkSettings.IPAddress}}" $(docker ps -l -q)' # Get IP of last Docker container
+abbr -a dkps 'docker ps' # List running Docker containers
+abbr -a dkpsa 'docker ps -a' # List all Docker containers
+abbr -a dki 'docker images' # List Docker images
+abbr -a dkrmac 'docker rm (docker ps -a -q)' # Delete all Docker containers
+abbr -a dkrmdi 'docker images -q -f dangling=true |xargs -r docker rmi' # Delete all dangling Docker images
 abbr -a dkelc 'docker exec -it (dklcid) bash' # Enter last container (works with Docker 1.3 and above)
 
 # misc aliases
@@ -95,19 +95,19 @@ end
 
 # start ssh-agent if not running
 if test -z (pgrep ssh-agent)
-  eval (ssh-agent -c) > /dev/null
-  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
-  set -Ux SSH_AGENT_PID $SSH_AGENT_PID
-  set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+    eval (ssh-agent -c) >/dev/null
+    set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+    set -Ux SSH_AGENT_PID $SSH_AGENT_PID
+    set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
 end
 
 # include custom dotfiles
 if test -e ~/.config/fish/config_local.fish
-  source ~/.config/fish/config_local.fish
+    source ~/.config/fish/config_local.fish
 end
 if test -e ~/.dotfiles_custom/config/fish/config.fish
-  source ~/.dotfiles_custom/config/fish/config.fish
+    source ~/.dotfiles_custom/config/fish/config.fish
 end
 if test -e ~/.dotfiles_custom/config/fish/completions
-  set -gx fish_complete_path $fish_complete_path ~/.dotfiles_custom/config/fish/completions
+    set -gx fish_complete_path $fish_complete_path ~/.dotfiles_custom/config/fish/completions
 end
