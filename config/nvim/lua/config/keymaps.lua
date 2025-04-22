@@ -6,4 +6,3 @@ local map = LazyVim.safe_keymap_set
 
 -- NeoTree
 map("n", "<leader>r", "<cmd>Neotree focus<cr>")
-map("n", "<leader>p", "<cmd>FzfLua commands<Cr>")
