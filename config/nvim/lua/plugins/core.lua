@@ -16,19 +16,4 @@ return {
       flavour = "mocha",
     },
   },
-  {
-    "folke/noice.nvim",
-    opts = function(_, opts)
-      table.insert(opts.routes, {
-        filter = {
-          event = "notify",
-          any = {
-            { find = "Failed to run `config` for nvim%-dap" },
-            { find = "Mason package path not found for %*%*debugpy%*%*" },
-          },
-        },
-        opts = { skip = true },
-      })
-    end,
-  },
 }
