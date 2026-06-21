@@ -4,6 +4,10 @@
 
 local map = LazyVim.safe_keymap_set
 
--- NeoTree
 map("n", "<leader>r", "<cmd>Neotree focus<cr>")
-map("n", "<leader>p", "<cmd>FzfLua commands<Cr>")
+map("n", "<C-F4>", function()
+  Snacks.bufdelete()
+end, { desc = "Delete Buffer" })
+map("i", "<C-k>", function()
+  return vim.lsp.buf.hover()
+end, { desc = "Hover" })
