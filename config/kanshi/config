@@ -1,5 +1,5 @@
 profile home-arch {
-  output "BNQ BenQ PD3200U PCK00700019" enable position 0,0 mode 3840x2160@60Hz
+  output "BNQ BenQ PD3200U PCK00700019" enable position 0,0 transform normal mode 3840x2160@60Hz
   output eDP-1 disable
   output "Dell Inc. DELL U2410 F525M06L06LL" enable position 3840,100 transform 270 mode 1920x1200@59.950Hz
   # TODO: use alias once available (in kanshi 1.7)
@@ -9,7 +9,7 @@ profile home-arch {
   exec killall -9 waybar; waybar -b bar-0
 }
 profile home-debian {
-  output "BenQ Corporation BenQ PD3200U PCK00700019" enable position 0,0 mode 3840x2160@60Hz
+  output "BenQ Corporation BenQ PD3200U PCK00700019" enable position 0,0 transform normal mode 3840x2160@60Hz
   output eDP-1 disable
   output "Dell Inc. DELL U2410 F525M06L06LL" enable position 3840,100 transform 270 mode 1920x1200@59.950Hz
   # TODO: use alias once available (in kanshi 1.7)
