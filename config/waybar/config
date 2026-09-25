@@ -9,7 +9,7 @@
     ],
     "modules-right": [
         "idle_inhibitor",
-        "network",
+        "group/net",
         "pulseaudio",
         "temperature",
         "cpu",
@@ -39,21 +39,32 @@
             "deactivated": ""
         }
     },
+    // network chip: network module + VPN name, styled as one chip via #net
+    "group/net": {
+        "orientation": "inherit",
+        "modules": ["network", "custom/vpn"],
+    },
     "network": {
         "format-wifi": "  {signalStrength}% - {essid}",
-        "format-ethernet": "  {ipaddr}",
+        "format-ethernet": "  {ipaddr}",
         "tooltip-format": "{ipaddr} @ {ifname}\r via {gwaddr}\r\rUp: {bandwidthUpBytes}\rDn: {bandwidthDownBytes}",
-        "format-linked": " {ifname} (No IP)",
-        "format-disconnected": "⚠ Disconnected",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": " Disconnected",
         "max-length": 35,
         "interval": 1,
+    },
+    "custom/vpn": {
+        "exec": "~/.config/waybar/vpn.sh",
+        "return-type": "json",
+        "interval": 5,
+        "format": "{}",
     },
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": " {icon} {volume}% {format_source}",
-        "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": "  {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "  {format_source}",
         "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
@@ -65,7 +76,7 @@
     "temperature": {
         "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
     "cpu": {
         "interval": 1,
@@ -83,7 +94,7 @@
         },
         "interval": 1,
         "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
+        "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
         "format-icons": ["", "", "", "", ""]

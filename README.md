@@ -6,7 +6,9 @@ bash -c "$(curl -fsSL https://raw.github.com/nordewal/dotfiles/master/bin/dotfil
 
 ## Install the following packages
 ```
-code fish gnome-keyring grim groff keepassxc alacritty mako neovim networkmanager pavucontrol playerctl pipewire pipewire-pulse slurp swappy sway swayidle waybar swaylock wlrctl ttf-fira-code wl-clipboard wofi safeeyes xdg-desktop-portal-wlr grim networkmanager-dmenu bat fd-find fzf
+code fish gnome-keyring grim groff keepassxc alacritty mako neovim networkmanager pavucontrol playerctl pipewire pipewire-pulse slurp swappy sway swayidle waybar swaylock wlrctl ttf-fira-code wl-clipboard wofi safeeyes xdg-desktop-portal-wlr grim networkmanager-dmenu bat fd-find fzf jq
+
+Icons in waybar come from Font Awesome: `otf-font-awesome` on Arch, `fonts-font-awesome` on Debian.
 
 ## Install Nerd font
 

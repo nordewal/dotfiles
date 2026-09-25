@@ -1,6 +1,8 @@
 * {
-  /* `otf-font-awesome` is required to be installed for icons */
-  font-family: Nimbus Sans, FontAwesome, Material Icons, sans-serif;
+  /* Icons: Font Awesome, using only codepoints that exist in both
+     Font Awesome 4 (Debian: fonts-font-awesome, family "FontAwesome") and
+     Font Awesome 6 (Arch: otf-font-awesome, family "Font Awesome 6 Free"). */
+  font-family: Nimbus Sans, "Font Awesome 6 Free", "Font Awesome 6 Brands", FontAwesome, sans-serif;
   font-size: 14px;
   min-height: 0;
   color: #f8f8f2;
@@ -58,7 +60,7 @@ button:hover {
 #battery,
 #temperature,
 #backlight,
-#network,
+#net,
 #pulseaudio,
 #wireplumber,
 #custom-media,
@@ -89,13 +91,17 @@ button:hover {
     background-color: rgb(236, 240, 241);
     color: rgb(45, 52, 54);
 }
-#network {
+/* group/net: network module + custom/vpn rendered as one chip */
+#net {
     background-color: rgba(0, 225, 217, 0.15);
     padding-left: 1rem;
     padding-right: 1rem;
 }
 #network.disconnected {
     background-color: rgba(120, 31, 25, 0.9);
+    border-radius: 4px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 #pulseaudio {
     background-color: rgba(241, 250, 140, 0.2);
